@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace alvin0319\libCommandOverload;
 
 use alvin0319\libCommandOverload\parameter\Parameter;
-use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\command\PluginCommand;
 
-class BaseCommand extends Command{
+class BaseCommand extends PluginCommand{
 	/** @var Overload[] */
 	protected $overloads = [];
 

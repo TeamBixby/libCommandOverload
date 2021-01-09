@@ -24,7 +24,7 @@ class OverloadTest extends PluginBase{
 
     public function onEnable() : void{
         if(!PacketInjector::isRegistered()) PacketInjector::register($this);
-        $command = new BaseCommand("test", "Test command");
+        $command = new BaseCommand("test", $this);
         $command->addOverload((new Overload())
             ->addParameter(new StringParameter("name"))
             ->addParameter(new IntegerParameter("amount"))
